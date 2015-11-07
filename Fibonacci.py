@@ -1,7 +1,15 @@
 #!/usr/bin/python
 
 fibonacci = [0,1]
-i = int(raw_input("How many numbers do you want? "))
+legitInput = False
+while not legitInput:
+    try:
+         i = int(raw_input("How many numbers do you want? "))
+    except ValueError as e:
+        print(e)
+        print("Try again!")
+    else:
+        legitInput = True
 x=1
 
 while x != i:
